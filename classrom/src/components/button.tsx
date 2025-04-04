@@ -1,5 +1,11 @@
-export function Button() {
+type Props = {
+   name: string;
+   onclick?: () => void; 
+}  
+
+export function Button({name, onclick}: Props) {
    return (
+      
       <div>
          <h1>Primeiros comando com react</h1>
          <main>
@@ -9,9 +15,10 @@ export function Button() {
                eius assumenda sed cum distinctio, labore, hic rem earum a eos modi deleniti.rem</p>
 
             <div>
-               <input type="text" placeholder="Digite seu nome" />
+               <input type="text" placeholder="SDigite seu nome" />
                <input type="text" placeholder="Digite seu email" />
-               <button>Clique aqui</button>
+
+               <button onClick={onclick} >{name}</button>
             </div>
 
             <div>
